@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://TE-DOMANED.hu/sitemap.xml
