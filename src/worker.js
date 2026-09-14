@@ -53,7 +53,7 @@ async function handleCheck(request) {
         method,
         redirect: 'follow',
         signal: controller.signal,
-        headers: { 'User-Agent': 'CsakNalamBot/1.0 (+https://csaknalam.hu)' },
+        headers: { 'User-Agent': 'CsakNalamBot/1.0 (+https://csaknalam.com)' },
         cf: { cacheTtl: 0 },
       });
     } finally {

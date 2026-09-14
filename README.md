@@ -12,11 +12,19 @@ szkriptre épül, ami mindent egy helyen kezel:
 - `public/` – a korábbi `index.html`, `about.html`, `privacy.html`,
   `robots.txt`, `sitemap.xml`, változatlan tartalommal.
 
-## Mielőtt élesíted
+## Állapot (2026-09-14)
 
-Ugyanazok a placeholderek, mint eddig, csak most a `public/` mappában:
-- `public/about.html`, `public/privacy.html`: `[ide kerül a saját email címed]`
-- `public/robots.txt`, `public/sitemap.xml`: `TE-DOMANED.hu` → a valódi domained
+A placeholderek ki vannak töltve: email (`czimbi.adam@gmail.com`) az `about.html`-ben
+és a `privacy.html`-ben, domain (`csaknalam.com`) a `robots.txt`-ben, a
+`sitemap.xml`-ben és a `worker.js` User-Agent stringjében. A `privacy.html`
+sütis bekezdése is frissült, mert az AdSense fejléc-szkript már be van kötve
+(a `ca-pub-2275464791427614` kliens-azonosítóval minden oldal `<head>`-jében).
+
+**Ami még hátra van:** az AdSense fejléc-szkript önmagában még nem jelenít meg
+hirdetést. Az AdSense fiókban létre kell hozni egy hirdetési egységet (vagy be
+kell kapcsolni az Auto ads-ot), és az onnan kapott `<ins class="adsbygoogle">`
+kódot be kell illeszteni az `index.html` `#ad-slot-1` divjébe (Auto ads esetén
+erre nincs is szükség, a szkript magától elhelyezi a hirdetéseket).
 
 ## Telepítés
 
