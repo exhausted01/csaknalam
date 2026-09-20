@@ -91,6 +91,13 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // A www. verziót mindig átirányítjuk a sima (apex) domainre, hogy ne legyen
+    // duplikált tartalom (ugyanaz a lap két külön címen) a Google szemében.
+    if (url.hostname === 'www.csaknalam.com') {
+      url.hostname = 'csaknalam.com';
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === '/api/check') {
       return handleCheck(request);
     }
